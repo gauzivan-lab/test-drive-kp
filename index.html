@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Тест-драйв AI Reels за $500 · Распаковка, аватар, 30 сценариев и 10 Reels</title>
-<meta name="description" content="Тест-драйв системы AI Reels за $500: распаковка личного бренда, цифровой аватар, контент-план на 30 дней, 30 сценариев и 10 готовых Reels под ключ. Бонус: 5 каруселей в подарок.">
+<title>Тест-драйв AI Reels за $500 · Распаковка, 2–4 аватара, 30 сценариев и 10 Reels</title>
+<meta name="description" content="Тест-драйв системы AI Reels за $500: распаковка личного бренда, 2–4 цифровых аватара, контент-план на 30 дней, 30 сценариев и 10 готовых Reels под ключ. Бонус: 5 каруселей в подарок.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -313,7 +313,69 @@
   @media (min-width: 640px) { .reel-card { width: 195px; border-radius: 16px; } }
   @media (min-width: 1024px) { .reel-card { width: 220px; } }
   .reel-card:hover { border-color: rgba(103, 210, 223, 0.45); box-shadow: 0 0 20px rgba(103, 210, 223, 0.15); }
+  
+  .reel-card { cursor: pointer; }
   .reel-card video { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+  .reel-card .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(5, 5, 5, 0.62);
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    pointer-events: none;
+    z-index: 4;
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
+  }
+  @media (min-width: 640px) { .reel-card .play-btn { width: 54px; height: 54px; } }
+  .reel-card:hover .play-btn {
+    transform: translate(-50%, -50%) scale(1.12);
+    background: rgba(13, 20, 22, 0.9);
+    border-color: var(--cyan-bright);
+    color: var(--cyan-bright);
+  }
+  .reel-card.is-playing .play-btn {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .reel-card .sound-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(5, 5, 5, 0.75);
+    border: 1px solid var(--line);
+    color: var(--cyan-bright);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    backdrop-filter: blur(6px);
+    pointer-events: none;
+  }
+  .reel-card.is-playing .sound-badge { display: flex; }
+  .reel-card .sound-hint {
+    margin-top: 5px;
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75);
+    transition: color 0.2s ease;
+  }
+  .reel-card:hover .sound-hint { color: var(--cyan-bright); }
+  .reel-card.is-playing .sound-hint { color: #a7f3d0; }
+
   .reel-card .tag-wrap {
     position: absolute; left: 0; right: 0; bottom: 0;
     padding: 12px;
@@ -439,7 +501,7 @@
       </div>
       <div data-reveal data-delay="200">
         <p style="font-size:17px;color:var(--muted);line-height:1.55;max-width:680px;margin:20px auto 0;">
-          Распаковка экспертности, анализ ниши, цифровой аватар и позиционирование, контент-план на 30 дней, 30 экспертных сценариев и 10 готовых Reels под ключ с обложками и описанием. Полный первый этап без урезания стандартов.
+          Распаковка экспертности, анализ ниши, 2–4 цифровых аватара и позиционирование, контент-план на 30 дней, 30 экспертных сценариев и 10 готовых Reels под ключ с обложками и описанием. Полный первый этап без урезания стандартов.
         </p>
       </div>
 
@@ -462,7 +524,7 @@
         <div class="grid grid-3" style="max-width:780px;margin:0 auto;">
           <div class="card"><div style="font-size:32px;font-weight:700;color:var(--cyan-bright);">10</div><div style="margin-top:6px;font-size:13px;color:var(--muted);">готовых Reels под ключ</div></div>
           <div class="card"><div style="font-size:32px;font-weight:700;color:var(--cyan-bright);">30</div><div style="margin-top:6px;font-size:13px;color:var(--muted);">сценариев на 30 дней</div></div>
-          <div class="card"><div style="font-size:32px;font-weight:700;color:var(--cyan-bright);">1</div><div style="margin-top:6px;font-size:13px;color:var(--muted);">цифровой аватар и стиль</div></div>
+          <div class="card"><div style="font-size:32px;font-weight:700;color:var(--cyan-bright);">2–4</div><div style="margin-top:6px;font-size:13px;color:var(--muted);">цифровых аватара и стиль</div></div>
         </div>
       </div>
     </div>
@@ -475,7 +537,7 @@
         <div class="section-heading">
           <span class="eyebrow">Что входит в тест-драйв</span>
           <h2>Первый этап большой системы — в полном объёме</h2>
-          <p>Это полноценный фундамент из нашего основного тарифа. Вы получаете упакованный бренд, работающего аватара и первые 10 роликов, готовых к публикации.</p>
+          <p>Это полноценный фундамент из нашего основного тарифа. Вы получаете упакованный бренд, 2–4 работающих аватара и первые 10 роликов, готовых к публикации.</p>
         </div>
       </div>
 
@@ -497,8 +559,8 @@
         <div data-reveal data-delay="120">
           <div class="card" style="height:100%">
             <span class="num-badge">03</span>
-            <h3 class="mini">Цифровой аватар, стиль и голос</h3>
-            <p style="color:var(--muted);font-size:14px;margin:0;">Создание аватара, подбор тембра и интонаций, визуальный код и позиционирование для видео.</p>
+            <h3 class="mini">2–4 цифровых аватара, стиль и голос</h3>
+            <p style="color:var(--muted);font-size:14px;margin:0;">Создание 2–4 аватаров под разные форматы и образы, подбор тембра и интонаций, визуальный код и позиционирование для видео.</p>
           </div>
         </div>
         <div data-reveal data-delay="180">
@@ -566,61 +628,61 @@
     <div class="rail-outer" data-reveal data-delay="100">
       <button class="rail-arrow prev" data-rail-prev="reelRail" aria-label="Назад">←</button>
       <div class="rail" id="reelRail" data-rail>
-        <div class="reel-card"><video src="reels/own-eva-dubai.mp4" poster="reels/own-eva-dubai.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Недвижимость Дубая</div></div></div>
-        <div class="reel-card"><video src="reels/own-yakovenko-zaabeel.mp4" poster="reels/own-yakovenko-zaabeel.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">One Za'abeel: архитектурная история</div></div></div>
-        <div class="reel-card"><video src="reels/own-yakovenko-liv-lux.mp4" poster="reels/own-yakovenko-liv-lux.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">LIV LUX: презентация объекта</div></div></div>
-        <div class="reel-card"><video src="reels/own-yakovenko-avatar.mp4" poster="reels/own-yakovenko-avatar.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Что умеет цифровой аватар</div></div></div>
-        <div class="reel-card"><video src="reels/own-yakovenko-dza.mp4" poster="reels/own-yakovenko-dza.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Пилотный AI-проект видеопродакшна</div></div></div>
-        <div class="reel-card"><video src="reels/ig-ed-003.mp4" poster="reels/ig-ed-003.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Дубай: город и стиль жизни</div></div></div>
-        <div class="reel-card"><video src="reels/ig-ed-005.mp4" poster="reels/ig-ed-005.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Жизнь в Дубае: объясняем</div></div></div>
-        <div class="reel-card"><video src="reels/ig-ed-008.mp4" poster="reels/ig-ed-008.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Торговые пространства Дубая</div></div></div>
-        <div class="reel-card"><video src="reels/ig-ed-009.mp4" poster="reels/ig-ed-009.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Первый взгляд на Дубай</div></div></div>
-        <div class="reel-card"><video src="reels/ig-ed-010.mp4" poster="reels/ig-ed-010.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Дубай за пределами небоскрёбов</div></div></div>
-        <div class="reel-card"><video src="reels/ig-ed-013.mp4" poster="reels/ig-ed-013.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Таможенные правила ОАЭ: объясняем</div></div></div>
-        <div class="reel-card"><video src="reels/ig-ed-015.mp4" poster="reels/ig-ed-015.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Дубай на личном опыте</div></div></div>
-        <div class="reel-card"><video src="reels/barsky-D03.mp4" poster="reels/barsky-D03.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Бренд и объект: разбор проекта</div></div></div>
-        <div class="reel-card"><video src="reels/barsky-D06.mp4" poster="reels/barsky-D06.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Переезд в Таиланд: экспертный формат</div></div></div>
-        <div class="reel-card"><video src="reels/barsky-D07.mp4" poster="reels/barsky-D07.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Инфраструктура Пхукета: обзор на месте</div></div></div>
-        <div class="reel-card"><video src="reels/barsky-D12.mp4" poster="reels/barsky-D12.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Стоимость владения недвижимостью</div></div></div>
-        <div class="reel-card"><video src="reels/barsky-D16.mp4" poster="reels/barsky-D16.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Оценка девелоперского проекта</div></div></div>
-        <div class="reel-card"><video src="reels/barsky-D17.mp4" poster="reels/barsky-D17.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Просмотр объекта в сезон дождей</div></div></div>
-        <div class="reel-card"><video src="reels/avatar-villa-tour.mp4" poster="reels/avatar-villa-tour.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">AI-презентер проводит тур по вилле</div></div></div>
-        <div class="reel-card"><video src="reels/avatar-terms.mp4" poster="reels/avatar-terms.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Презентация проекта и условий покупки</div></div></div>
-        <div class="reel-card"><video src="reels/avatar-comparison.mp4" poster="reels/avatar-comparison.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Сравнение объектов на двух островах</div></div></div>
-        <div class="reel-card"><video src="reels/avatar-investment.mp4" poster="reels/avatar-investment.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Презентация мастер-плана и очередей проекта</div></div></div>
-        <div class="reel-card"><video src="reels/avatar-ru-studio.mp4" poster="reels/avatar-ru-studio.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">AI-аватар в студии на фоне города</div></div></div>
-        <div class="reel-card"><video src="reels/avatar-price-tour.mp4" poster="reels/avatar-price-tour.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Тур по комнатам и особенностям комплекса</div></div></div>
-        <div class="reel-card"><video src="reels/render-villa-walkthrough.mp4" poster="reels/render-villa-walkthrough.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Виртуальный тур по вилле: экстерьер и интерьер</div></div></div>
-        <div class="reel-card"><video src="reels/render-complex-offer.mp4" poster="reels/render-complex-offer.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Визуализация комплекса и предложение</div></div></div>
-        <div class="reel-card"><video src="reels/avatar-showroom-model.mp4" poster="reels/avatar-showroom-model.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">AI-презентер показывает макет проекта</div></div></div>
-        <div class="reel-card"><video src="reels/layan-villa.mp4" poster="reels/layan-villa.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Девелопмент Пхукета</div><div class="ttl">Layan Verde: архитектура и стройка</div></div></div>
-        <div class="reel-card"><video src="reels/layan-office.mp4" poster="reels/layan-office.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Девелопмент Пхукета</div><div class="ttl">Layan Verde: интерьерный видеокреатив</div></div></div>
-        <div class="reel-card"><video src="reels/layan-jeep.mp4" poster="reels/layan-jeep.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Девелопмент Пхукета</div><div class="ttl">Layan Verde: лайфстайл-видеокреатив</div></div></div>
-        <div class="reel-card"><video src="reels/DVApVCZEtEY.mp4" poster="reels/DVApVCZEtEY.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Тур по вилле в Лаян</div></div></div>
-        <div class="reel-card"><video src="reels/DU-aHz6Cfhg.mp4" poster="reels/DU-aHz6Cfhg.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Пхукет: вилла с видом на океан</div></div></div>
-        <div class="reel-card"><video src="reels/own-edenvest-phuket.mp4" poster="reels/own-edenvest-phuket.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Жизнь на Пхукете</div></div></div>
-        <div class="reel-card"><video src="reels/ig-sv-020.mp4" poster="reels/ig-sv-020.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">Поездка на Tesla Cybercab</div></div></div>
-        <div class="reel-card"><video src="reels/ig-sv-019.mp4" poster="reels/ig-sv-019.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">Костюм Железного человека в гараже</div></div></div>
-        <div class="reel-card"><video src="reels/ig-sv-016.mp4" poster="reels/ig-sv-016.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">Jetson ONE: личный летательный аппарат</div></div></div>
-        <div class="reel-card"><video src="reels/ig-sv-017.mp4" poster="reels/ig-sv-017.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">OpenAI Codex Micro: дебют устройства</div></div></div>
-        <div class="reel-card"><video src="reels/ig-sv-021.mp4" poster="reels/ig-sv-021.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">AI учит язык биологии</div></div></div>
-        <div class="reel-card"><video src="reels/ig-sv-023.mp4" poster="reels/ig-sv-023.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">Oasis 1: кольцо вместо клавиатуры</div></div></div>
-        <div class="reel-card"><video src="reels/ig-sv-022.mp4" poster="reels/ig-sv-022.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">Карьер на беспилотных грузовиках</div></div></div>
-        <div class="reel-card"><video src="reels/ig-sv-008.mp4" poster="reels/ig-sv-008.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">AI-инструменты для видеопродакшна</div></div></div>
-        <div class="reel-card"><video src="reels/ig-sv-011.mp4" poster="reels/ig-sv-011.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">Python и телеметрия Формулы 1</div></div></div>
-        <div class="reel-card"><video src="reels/ig-sv-013.mp4" poster="reels/ig-sv-013.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">Atlas: робототехника и AI</div></div></div>
-        <div class="reel-card"><video src="reels/ig-ia-002.mp4" poster="reels/ig-ia-002.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Интерьеры и дизайн</div><div class="ttl">Цветовая палитра интерьера</div></div></div>
-        <div class="reel-card"><video src="reels/ig-ia-006.mp4" poster="reels/ig-ia-006.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Интерьеры и дизайн</div><div class="ttl">Цвет и фактура в интерьере</div></div></div>
-        <div class="reel-card"><video src="reels/ig-ia-009.mp4" poster="reels/ig-ia-009.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Интерьеры и дизайн</div><div class="ttl">Решения в интерьере, которые стоит пересмотреть</div></div></div>
-        <div class="reel-card"><video src="reels/ig-ia-004.mp4" poster="reels/ig-ia-004.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Интерьеры и дизайн</div><div class="ttl">Стили интерьера: визуальный обзор</div></div></div>
-        <div class="reel-card"><video src="reels/ig-ia-005.mp4" poster="reels/ig-ia-005.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Интерьеры и дизайн</div><div class="ttl">Функциональная планировка кухни</div></div></div>
-        <div class="reel-card"><video src="reels/ig-ia-003.mp4" poster="reels/ig-ia-003.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Интерьеры и дизайн</div><div class="ttl">AURA Interiors: визуальная история</div></div></div>
-        <div class="reel-card"><video src="reels/own-alma-alta.mp4" poster="reels/own-alma-alta.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Испании</div><div class="ttl">Недвижимость в Испании</div></div></div>
-        <div class="reel-card"><video src="reels/ig-aa-002.mp4" poster="reels/ig-aa-002.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Испании</div><div class="ttl">Как выбрать место для жизни</div></div></div>
-        <div class="reel-card"><video src="reels/ig-aa-003.mp4" poster="reels/ig-aa-003.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Испании</div><div class="ttl">Барселона: новости города</div></div></div>
-        <div class="reel-card"><video src="reels/ig-aa-005.mp4" poster="reels/ig-aa-005.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Недвижимость Испании</div><div class="ttl">Владение недвижимостью: объясняем</div></div></div>
-        <div class="reel-card"><video src="reels/ig-cs-012.mp4" poster="reels/ig-cs-012.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Бизнес в Италии</div><div class="ttl">Автоматизация вместо ручного ввода данных</div></div></div>
-        <div class="reel-card"><video src="reels/ig-cs-013.mp4" poster="reels/ig-cs-013.webp" muted loop playsinline preload="none"></video><div class="tag-wrap"><div class="tag">Бизнес в Италии</div><div class="ttl">Почему качество продукта решает в продажах</div></div></div>
+        <div class="reel-card"><video src="reels/own-eva-dubai.mp4" poster="reels/own-eva-dubai.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Недвижимость Дубая</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/own-yakovenko-zaabeel.mp4" poster="reels/own-yakovenko-zaabeel.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">One Za'abeel: архитектурная история</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/own-yakovenko-liv-lux.mp4" poster="reels/own-yakovenko-liv-lux.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">LIV LUX: презентация объекта</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/own-yakovenko-avatar.mp4" poster="reels/own-yakovenko-avatar.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Что умеет цифровой аватар</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-ed-011.mp4" poster="reels/ig-ed-011.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Публикации в соцсетях в ОАЭ</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-ed-003.mp4" poster="reels/ig-ed-003.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Дубай: город и стиль жизни</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-ed-005.mp4" poster="reels/ig-ed-005.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Жизнь в Дубае: объясняем</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-ed-008.mp4" poster="reels/ig-ed-008.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Торговые пространства Дубая</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-ed-009.mp4" poster="reels/ig-ed-009.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Первый взгляд на Дубай</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-ed-010.mp4" poster="reels/ig-ed-010.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Дубай за пределами небоскрёбов</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-ed-013.mp4" poster="reels/ig-ed-013.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Таможенные правила ОАЭ: объясняем</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-ed-015.mp4" poster="reels/ig-ed-015.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Дубая</div><div class="ttl">Дубай на личном опыте</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/barsky-D03.mp4" poster="reels/barsky-D03.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Бренд и объект: разбор проекта</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/barsky-D06.mp4" poster="reels/barsky-D06.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Переезд в Таиланд: экспертный формат</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/barsky-D07.mp4" poster="reels/barsky-D07.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Инфраструктура Пхукета: обзор на месте</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/barsky-D12.mp4" poster="reels/barsky-D12.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Стоимость владения недвижимостью</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/barsky-D16.mp4" poster="reels/barsky-D16.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Оценка девелоперского проекта</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/barsky-D17.mp4" poster="reels/barsky-D17.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Просмотр объекта в сезон дождей</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/avatar-villa-tour.mp4" poster="reels/avatar-villa-tour.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">AI-презентер проводит тур по вилле</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/avatar-terms.mp4" poster="reels/avatar-terms.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Презентация проекта и условий покупки</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/avatar-comparison.mp4" poster="reels/avatar-comparison.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Сравнение объектов на двух островах</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/avatar-investment.mp4" poster="reels/avatar-investment.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Презентация мастер-плана и очередей проекта</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/avatar-ru-studio.mp4" poster="reels/avatar-ru-studio.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">AI-аватар в студии на фоне города</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/avatar-price-tour.mp4" poster="reels/avatar-price-tour.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Тур по комнатам и особенностям комплекса</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/render-villa-walkthrough.mp4" poster="reels/render-villa-walkthrough.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Виртуальный тур по вилле: экстерьер и интерьер</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/render-complex-offer.mp4" poster="reels/render-complex-offer.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Визуализация комплекса и предложение</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/avatar-showroom-model.mp4" poster="reels/avatar-showroom-model.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">AI-презентер показывает макет проекта</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/layan-villa.mp4" poster="reels/layan-villa.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Девелопмент Пхукета</div><div class="ttl">Layan Verde: архитектура и стройка</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/layan-office.mp4" poster="reels/layan-office.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Девелопмент Пхукета</div><div class="ttl">Layan Verde: интерьерный видеокреатив</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/layan-jeep.mp4" poster="reels/layan-jeep.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Девелопмент Пхукета</div><div class="ttl">Layan Verde: лайфстайл-видеокреатив</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/DVApVCZEtEY.mp4" poster="reels/DVApVCZEtEY.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Тур по вилле в Лаян</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/DU-aHz6Cfhg.mp4" poster="reels/DU-aHz6Cfhg.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Пхукет: вилла с видом на океан</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/own-edenvest-phuket.mp4" poster="reels/own-edenvest-phuket.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Таиланда</div><div class="ttl">Жизнь на Пхукете</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-sv-020.mp4" poster="reels/ig-sv-020.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">Поездка на Tesla Cybercab</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-sv-019.mp4" poster="reels/ig-sv-019.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">Костюм Железного человека в гараже</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-sv-016.mp4" poster="reels/ig-sv-016.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">Jetson ONE: личный летательный аппарат</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-sv-017.mp4" poster="reels/ig-sv-017.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">OpenAI Codex Micro: дебют устройства</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-sv-021.mp4" poster="reels/ig-sv-021.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">AI учит язык биологии</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-sv-023.mp4" poster="reels/ig-sv-023.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">Oasis 1: кольцо вместо клавиатуры</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-sv-022.mp4" poster="reels/ig-sv-022.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">Карьер на беспилотных грузовиках</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-sv-008.mp4" poster="reels/ig-sv-008.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">AI-инструменты для видеопродакшна</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-sv-011.mp4" poster="reels/ig-sv-011.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">Python и телеметрия Формулы 1</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-sv-013.mp4" poster="reels/ig-sv-013.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">AI-технологии</div><div class="ttl">Atlas: робототехника и AI</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-ia-002.mp4" poster="reels/ig-ia-002.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Интерьеры и дизайн</div><div class="ttl">Цветовая палитра интерьера</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-ia-006.mp4" poster="reels/ig-ia-006.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Интерьеры и дизайн</div><div class="ttl">Цвет и фактура в интерьере</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-ia-009.mp4" poster="reels/ig-ia-009.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Интерьеры и дизайн</div><div class="ttl">Решения в интерьере, которые стоит пересмотреть</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-ia-004.mp4" poster="reels/ig-ia-004.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Интерьеры и дизайн</div><div class="ttl">Стили интерьера: визуальный обзор</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-ia-005.mp4" poster="reels/ig-ia-005.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Интерьеры и дизайн</div><div class="ttl">Функциональная планировка кухни</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-ia-003.mp4" poster="reels/ig-ia-003.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Интерьеры и дизайн</div><div class="ttl">AURA Interiors: визуальная история</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/own-alma-alta.mp4" poster="reels/own-alma-alta.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Испании</div><div class="ttl">Недвижимость в Испании</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-aa-002.mp4" poster="reels/ig-aa-002.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Испании</div><div class="ttl">Как выбрать место для жизни</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-aa-003.mp4" poster="reels/ig-aa-003.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Испании</div><div class="ttl">Барселона: новости города</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-aa-005.mp4" poster="reels/ig-aa-005.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Недвижимость Испании</div><div class="ttl">Владение недвижимостью: объясняем</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-cs-012.mp4" poster="reels/ig-cs-012.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Бизнес в Италии</div><div class="ttl">Автоматизация вместо ручного ввода данных</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
+        <div class="reel-card"><video src="reels/ig-cs-013.mp4" poster="reels/ig-cs-013.webp" muted loop playsinline preload="none"></video><div class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-left:2px;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></div><div class="sound-badge" aria-hidden="true">❚❚</div><div class="tag-wrap"><div class="tag">Бизнес в Италии</div><div class="ttl">Почему качество продукта решает в продажах</div><div class="sound-hint">Смотреть со звуком ↗</div></div></div>
       </div>
       <button class="rail-arrow next" data-rail-next="reelRail" aria-label="Вперёд">→</button>
     </div>
@@ -632,23 +694,23 @@
       <div data-reveal>
         <div class="section-heading">
           <span class="eyebrow">Примеры постов-каруселей</span>
-          <h2>6 реальных постов: релизы застройщиков, мегапроекты и виллы у моря</h2>
-          <p>Реальные карусели из аккаунтов клиентов: <strong>@oksana.property.ae</strong> (ОАЭ) и <strong>@viktoria.phuket.realestate</strong> (Пхукет). У каждого поста своя лента карточек — листайте в сторону, как в Instagram.</p>
+          <h2>15 экспертных каруселей: аналитика, мегапроекты и курортные резиденции</h2>
+          <p>Полный архив экспертных каруселей для премиальной недвижимости: аналитика локаций, картографика, разборы планировок, ROI и архитектурные презентации. У каждого поста своя интерактивная лента — листайте в сторону, как в Instagram.</p>
         </div>
       </div>
     </div>
 
-    <!-- Пост 1: Оксана · Sei Saadiyat -->
+    <!-- Карусель 01: Sei Saadiyat -->
     <div class="cc-post" data-reveal data-delay="0">
       <div class="cc-post-head">
         <div class="cc-post-meta-left">
-          <div class="cc-avatar">O</div>
+          <div class="cc-avatar">01</div>
           <div>
-            <div class="cc-name">Оксана · @oksana.property.ae</div>
-            <div class="cc-meta">Пост 1 · Релиз Sei Saadiyat рядом с Лувром, Абу-Даби</div>
+            <div class="cc-name">Релиз Sei Saadiyat рядом с Лувром, Абу-Даби</div>
+            <div class="cc-meta">8 слайдов · Архитектура, мастерплан и условия покупки</div>
           </div>
         </div>
-        <span class="cc-badge">8 слайдов · смахните →</span>
+        <span class="cc-badge">Карусель 01 · смахните →</span>
       </div>
       <div class="rail-outer">
         <button class="rail-arrow prev" aria-label="Назад">←</button>
@@ -666,17 +728,17 @@
       </div>
     </div>
 
-    <!-- Пост 2: Оксана · Bashayer on the Bay -->
+    <!-- Карусель 02: Bashayer on the Bay -->
     <div class="cc-post" data-reveal data-delay="50">
       <div class="cc-post-head">
         <div class="cc-post-meta-left">
-          <div class="cc-avatar">O</div>
+          <div class="cc-avatar">02</div>
           <div>
-            <div class="cc-name">Оксана · @oksana.property.ae</div>
-            <div class="cc-meta">Пост 2 · Bashayer on the Bay (Modon), Hudayriyat Island</div>
+            <div class="cc-name">Bashayer on the Bay (Modon), Hudayriyat Island</div>
+            <div class="cc-meta">8 слайдов · Первая береговая линия и мастерплан острова</div>
           </div>
         </div>
-        <span class="cc-badge">8 слайдов · смахните →</span>
+        <span class="cc-badge">Карусель 02 · смахните →</span>
       </div>
       <div class="rail-outer">
         <button class="rail-arrow prev" aria-label="Назад">←</button>
@@ -694,17 +756,17 @@
       </div>
     </div>
 
-    <!-- Пост 3: Оксана · The Loop Dubai -->
+    <!-- Карусель 03: The Loop Dubai -->
     <div class="cc-post" data-reveal data-delay="50">
       <div class="cc-post-head">
         <div class="cc-post-meta-left">
-          <div class="cc-avatar">O</div>
+          <div class="cc-avatar">03</div>
           <div>
-            <div class="cc-name">Оксана · @oksana.property.ae</div>
-            <div class="cc-meta">Пост 3 · The Loop: 93 км климатического шоссе, Дубай</div>
+            <div class="cc-name">The Loop: 93 км климатического шоссе будущего, Дубай</div>
+            <div class="cc-meta">9 слайдов · Урбанистика, экология и влияние на цены жилья</div>
           </div>
         </div>
-        <span class="cc-badge">9 слайдов · смахните →</span>
+        <span class="cc-badge">Карусель 03 · смахните →</span>
       </div>
       <div class="rail-outer">
         <button class="rail-arrow prev" aria-label="Назад">←</button>
@@ -723,17 +785,17 @@
       </div>
     </div>
 
-    <!-- Пост 4: Оксана · Marsa Al Saadiyat -->
+    <!-- Карусель 04: Marsa Al Saadiyat -->
     <div class="cc-post" data-reveal data-delay="50">
       <div class="cc-post-head">
         <div class="cc-post-meta-left">
-          <div class="cc-avatar">O</div>
+          <div class="cc-avatar">04</div>
           <div>
-            <div class="cc-name">Оксана · @oksana.property.ae</div>
-            <div class="cc-meta">Пост 4 · Marsa Al Saadiyat: культурный квартал, Абу-Даби</div>
+            <div class="cc-name">Marsa Al Saadiyat: культурный квартал, Абу-Даби</div>
+            <div class="cc-meta">9 слайдов · Финальная фаза мастерплана острова Саадият</div>
           </div>
         </div>
-        <span class="cc-badge">9 слайдов · смахните →</span>
+        <span class="cc-badge">Карусель 04 · смахните →</span>
       </div>
       <div class="rail-outer">
         <button class="rail-arrow prev" aria-label="Назад">←</button>
@@ -752,17 +814,17 @@
       </div>
     </div>
 
-    <!-- Пост 5: Оксана · 7 проектов ОАЭ -->
+    <!-- Карусель 05: 7 инвестиционных стартов -->
     <div class="cc-post" data-reveal data-delay="50">
       <div class="cc-post-head">
         <div class="cc-post-meta-left">
-          <div class="cc-avatar">O</div>
+          <div class="cc-avatar">05</div>
           <div>
-            <div class="cc-name">Оксана · @oksana.property.ae</div>
-            <div class="cc-meta">Пост 5 · Сравнение 7 новых стартов: цены и стратегия, ОАЭ</div>
+            <div class="cc-name">Сравнение 7 новых стартов: цены, стратегия и аналитика, ОАЭ</div>
+            <div class="cc-meta">9 слайдов · Инвестиционные кейсы и выбор стратегии</div>
           </div>
         </div>
-        <span class="cc-badge">9 слайдов · смахните →</span>
+        <span class="cc-badge">Карусель 05 · смахните →</span>
       </div>
       <div class="rail-outer">
         <button class="rail-arrow prev" aria-label="Назад">←</button>
@@ -781,17 +843,273 @@
       </div>
     </div>
 
-    <!-- Пост 6: Виктория · Sea Theatre Rawai -->
+    <!-- Карусель 06: Yas Point (Aldar) -->
     <div class="cc-post" data-reveal data-delay="50">
       <div class="cc-post-head">
         <div class="cc-post-meta-left">
-          <div class="cc-avatar">V</div>
+          <div class="cc-avatar">06</div>
           <div>
-            <div class="cc-name">Виктория · @viktoria.phuket.realestate</div>
-            <div class="cc-meta">Пост 6 · Sea Theatre: 8 вилл у моря на первой линии, Пхукет</div>
+            <div class="cc-name">Yas Point (Aldar) — первый запуск на набережной (AED 6 млрд)</div>
+            <div class="cc-meta">9 слайдов · Waterfront резиденции, цены и условия рассрочки</div>
           </div>
         </div>
-        <span class="cc-badge">9 слайдов · смахните →</span>
+        <span class="cc-badge">Карусель 06 · смахните →</span>
+      </div>
+      <div class="rail-outer">
+        <button class="rail-arrow prev" aria-label="Назад">←</button>
+        <div class="rail" data-rail>
+          <div class="cc-card"><img src="carousels/post-yas-point/slide-01.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 1"></div>
+          <div class="cc-card"><img src="carousels/post-yas-point/slide-02.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 2"></div>
+          <div class="cc-card"><img src="carousels/post-yas-point/slide-03.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 3"></div>
+          <div class="cc-card"><img src="carousels/post-yas-point/slide-04.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 4"></div>
+          <div class="cc-card"><img src="carousels/post-yas-point/slide-05.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 5"></div>
+          <div class="cc-card"><img src="carousels/post-yas-point/slide-06.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 6"></div>
+          <div class="cc-card"><img src="carousels/post-yas-point/slide-07.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 7"></div>
+          <div class="cc-card"><img src="carousels/post-yas-point/slide-08.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 8"></div>
+          <div class="cc-card"><img src="carousels/post-yas-point/slide-09.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 9"></div>
+        </div>
+        <button class="rail-arrow next" aria-label="Вперёд">→</button>
+      </div>
+    </div>
+
+    <!-- Карусель 07: 17 мегапроектов ОАЭ -->
+    <div class="cc-post" data-reveal data-delay="50">
+      <div class="cc-post-head">
+        <div class="cc-post-meta-left">
+          <div class="cc-avatar">07</div>
+          <div>
+            <div class="cc-name">17 мегапроектов ОАЭ, которые меняют рынок недвижимости</div>
+            <div class="cc-meta">19 слайдов · Ключевые инфраструктурные драйверы роста цен</div>
+          </div>
+        </div>
+        <span class="cc-badge">Карусель 07 · смахните →</span>
+      </div>
+      <div class="rail-outer">
+        <button class="rail-arrow prev" aria-label="Назад">←</button>
+        <div class="rail" data-rail>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-01.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 1"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-02.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 2"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-03.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 3"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-04.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 4"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-05.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 5"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-06.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 6"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-07.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 7"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-08.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 8"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-09.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 9"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-10.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 10"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-11.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 11"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-12.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 12"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-13.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 13"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-14.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 14"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-15.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 15"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-16.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 16"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-17.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 17"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-18.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 18"></div>
+          <div class="cc-card"><img src="carousels/post-17-megaprojects/slide-19.webp" loading="lazy" decoding="async" alt="17 Mega Projects, карточка 19"></div>
+        </div>
+        <button class="rail-arrow next" aria-label="Вперёд">→</button>
+      </div>
+    </div>
+
+    <!-- Карусель 08: Unit 2301 Waterfront -->
+    <div class="cc-post" data-reveal data-delay="50">
+      <div class="cc-post-head">
+        <div class="cc-post-meta-left">
+          <div class="cc-avatar">08</div>
+          <div>
+            <div class="cc-name">Разбор видового юнита у воды: 222 м², планировка и доходность</div>
+            <div class="cc-meta">9 слайдов · Экспертный разбор ликвидности конкретного лота</div>
+          </div>
+        </div>
+        <span class="cc-badge">Карусель 08 · смахните →</span>
+      </div>
+      <div class="rail-outer">
+        <button class="rail-arrow prev" aria-label="Назад">←</button>
+        <div class="rail" data-rail>
+          <div class="cc-card"><img src="carousels/post-unit-2301/slide-01.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 1"></div>
+          <div class="cc-card"><img src="carousels/post-unit-2301/slide-02.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 2"></div>
+          <div class="cc-card"><img src="carousels/post-unit-2301/slide-03.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 3"></div>
+          <div class="cc-card"><img src="carousels/post-unit-2301/slide-04.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 4"></div>
+          <div class="cc-card"><img src="carousels/post-unit-2301/slide-05.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 5"></div>
+          <div class="cc-card"><img src="carousels/post-unit-2301/slide-06.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 6"></div>
+          <div class="cc-card"><img src="carousels/post-unit-2301/slide-07.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 7"></div>
+          <div class="cc-card"><img src="carousels/post-unit-2301/slide-08.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 8"></div>
+          <div class="cc-card"><img src="carousels/post-unit-2301/slide-09.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 9"></div>
+        </div>
+        <button class="rail-arrow next" aria-label="Вперёд">→</button>
+      </div>
+    </div>
+
+    <!-- Карусель 09: Зоны роста -->
+    <div class="cc-post" data-reveal data-delay="50">
+      <div class="cc-post-head">
+        <div class="cc-post-meta-left">
+          <div class="cc-avatar">09</div>
+          <div>
+            <div class="cc-name">Альтернативы Palm Jumeirah и Dubai Hills: 3 зоны с высоким ROI</div>
+            <div class="cc-meta">10 слайдов · Аналитика локаций с максимальным потенциалом роста</div>
+          </div>
+        </div>
+        <span class="cc-badge">Карусель 09 · смахните →</span>
+      </div>
+      <div class="rail-outer">
+        <button class="rail-arrow prev" aria-label="Назад">←</button>
+        <div class="rail" data-rail>
+          <div class="cc-card"><img src="carousels/post-emerging-zones/slide-01.webp" loading="lazy" decoding="async" alt="Emerging Zones, карточка 1"></div>
+          <div class="cc-card"><img src="carousels/post-emerging-zones/slide-02.webp" loading="lazy" decoding="async" alt="Emerging Zones, карточка 2"></div>
+          <div class="cc-card"><img src="carousels/post-emerging-zones/slide-03.webp" loading="lazy" decoding="async" alt="Emerging Zones, карточка 3"></div>
+          <div class="cc-card"><img src="carousels/post-emerging-zones/slide-04.webp" loading="lazy" decoding="async" alt="Emerging Zones, карточка 4"></div>
+          <div class="cc-card"><img src="carousels/post-emerging-zones/slide-05.webp" loading="lazy" decoding="async" alt="Emerging Zones, карточка 5"></div>
+          <div class="cc-card"><img src="carousels/post-emerging-zones/slide-06.webp" loading="lazy" decoding="async" alt="Emerging Zones, карточка 6"></div>
+          <div class="cc-card"><img src="carousels/post-emerging-zones/slide-07.webp" loading="lazy" decoding="async" alt="Emerging Zones, карточка 7"></div>
+          <div class="cc-card"><img src="carousels/post-emerging-zones/slide-08.webp" loading="lazy" decoding="async" alt="Emerging Zones, карточка 8"></div>
+          <div class="cc-card"><img src="carousels/post-emerging-zones/slide-09.webp" loading="lazy" decoding="async" alt="Emerging Zones, карточка 9"></div>
+          <div class="cc-card"><img src="carousels/post-emerging-zones/slide-10.webp" loading="lazy" decoding="async" alt="Emerging Zones, карточка 10"></div>
+        </div>
+        <button class="rail-arrow next" aria-label="Вперёд">→</button>
+      </div>
+    </div>
+
+    <!-- Карусель 10: Абу-Даби vs Дубай -->
+    <div class="cc-post" data-reveal data-delay="50">
+      <div class="cc-post-head">
+        <div class="cc-post-meta-left">
+          <div class="cc-avatar">10</div>
+          <div>
+            <div class="cc-name">Абу-Даби vs Дубай: динамика цен, доходности и объёма сделок</div>
+            <div class="cc-meta">8 слайдов · Макроэкономика рынка и сравнение двух эмиратов</div>
+          </div>
+        </div>
+        <span class="cc-badge">Карусель 10 · смахните →</span>
+      </div>
+      <div class="rail-outer">
+        <button class="rail-arrow prev" aria-label="Назад">←</button>
+        <div class="rail" data-rail>
+          <div class="cc-card"><img src="carousels/post-market-q1/slide-01.webp" loading="lazy" decoding="async" alt="Market Q1, карточка 1"></div>
+          <div class="cc-card"><img src="carousels/post-market-q1/slide-02.webp" loading="lazy" decoding="async" alt="Market Q1, карточка 2"></div>
+          <div class="cc-card"><img src="carousels/post-market-q1/slide-03.webp" loading="lazy" decoding="async" alt="Market Q1, карточка 3"></div>
+          <div class="cc-card"><img src="carousels/post-market-q1/slide-04.webp" loading="lazy" decoding="async" alt="Market Q1, карточка 4"></div>
+          <div class="cc-card"><img src="carousels/post-market-q1/slide-05.webp" loading="lazy" decoding="async" alt="Market Q1, карточка 5"></div>
+          <div class="cc-card"><img src="carousels/post-market-q1/slide-06.webp" loading="lazy" decoding="async" alt="Market Q1, карточка 6"></div>
+          <div class="cc-card"><img src="carousels/post-market-q1/slide-07.webp" loading="lazy" decoding="async" alt="Market Q1, карточка 7"></div>
+          <div class="cc-card"><img src="carousels/post-market-q1/slide-08.webp" loading="lazy" decoding="async" alt="Market Q1, карточка 8"></div>
+        </div>
+        <button class="rail-arrow next" aria-label="Вперёд">→</button>
+      </div>
+    </div>
+
+    <!-- Карусель 11: Самый дорогой отрезок побережья в Дубае -->
+    <div class="cc-post" data-reveal data-delay="50">
+      <div class="cc-post-head">
+        <div class="cc-post-meta-left">
+          <div class="cc-avatar">11</div>
+          <div>
+            <div class="cc-name">Самый дорогой отрезок побережья в Дубае: Jumeirah Bay & La Mer</div>
+            <div class="cc-meta">7 слайдов · Аналитика ультрапремиальной прибрежной зоны и закрытые сделки</div>
+          </div>
+        </div>
+        <span class="cc-badge">Карусель 11 · смахните →</span>
+      </div>
+      <div class="rail-outer">
+        <button class="rail-arrow prev" aria-label="Назад">←</button>
+        <div class="rail" data-rail>
+          <div class="cc-card"><img src="carousels/post-coastline-dubai/slide-01.webp" loading="lazy" decoding="async" alt="Coastline Dubai, карточка 1"></div>
+          <div class="cc-card"><img src="carousels/post-coastline-dubai/slide-02.webp" loading="lazy" decoding="async" alt="Coastline Dubai, карточка 2"></div>
+          <div class="cc-card"><img src="carousels/post-coastline-dubai/slide-03.webp" loading="lazy" decoding="async" alt="Coastline Dubai, карточка 3"></div>
+          <div class="cc-card"><img src="carousels/post-coastline-dubai/slide-04.webp" loading="lazy" decoding="async" alt="Coastline Dubai, карточка 4"></div>
+          <div class="cc-card"><img src="carousels/post-coastline-dubai/slide-05.webp" loading="lazy" decoding="async" alt="Coastline Dubai, карточка 5"></div>
+          <div class="cc-card"><img src="carousels/post-coastline-dubai/slide-06.webp" loading="lazy" decoding="async" alt="Coastline Dubai, карточка 6"></div>
+          <div class="cc-card"><img src="carousels/post-coastline-dubai/slide-07.webp" loading="lazy" decoding="async" alt="Coastline Dubai, карточка 7"></div>
+        </div>
+        <button class="rail-arrow next" aria-label="Вперёд">→</button>
+      </div>
+    </div>
+
+    <!-- Карусель 12: Дорожная карта ОАЭ -->
+    <div class="cc-post" data-reveal data-delay="50">
+      <div class="cc-post-head">
+        <div class="cc-post-meta-left">
+          <div class="cc-avatar">12</div>
+          <div>
+            <div class="cc-name">Дорожная карта развития ОАЭ: инфраструктура и градостроительство</div>
+            <div class="cc-meta">7 слайдов · Ключевые транспортные артерии, мосты и новые районы</div>
+          </div>
+        </div>
+        <span class="cc-badge">Карусель 12 · смахните →</span>
+      </div>
+      <div class="rail-outer">
+        <button class="rail-arrow prev" aria-label="Назад">←</button>
+        <div class="rail" data-rail>
+          <div class="cc-card"><img src="carousels/post-uae-roadmap/slide-01.webp" loading="lazy" decoding="async" alt="UAE Roadmap, карточка 1"></div>
+          <div class="cc-card"><img src="carousels/post-uae-roadmap/slide-02.webp" loading="lazy" decoding="async" alt="UAE Roadmap, карточка 2"></div>
+          <div class="cc-card"><img src="carousels/post-uae-roadmap/slide-03.webp" loading="lazy" decoding="async" alt="UAE Roadmap, карточка 3"></div>
+          <div class="cc-card"><img src="carousels/post-uae-roadmap/slide-04.webp" loading="lazy" decoding="async" alt="UAE Roadmap, карточка 4"></div>
+          <div class="cc-card"><img src="carousels/post-uae-roadmap/slide-05.webp" loading="lazy" decoding="async" alt="UAE Roadmap, карточка 5"></div>
+          <div class="cc-card"><img src="carousels/post-uae-roadmap/slide-06.webp" loading="lazy" decoding="async" alt="UAE Roadmap, карточка 6"></div>
+          <div class="cc-card"><img src="carousels/post-uae-roadmap/slide-07.webp" loading="lazy" decoding="async" alt="UAE Roadmap, карточка 7"></div>
+        </div>
+        <button class="rail-arrow next" aria-label="Вперёд">→</button>
+      </div>
+    </div>
+
+    <!-- Карусель 13: Первая ипотека на off-plan в Абу-Даби -->
+    <div class="cc-post" data-reveal data-delay="50">
+      <div class="cc-post-head">
+        <div class="cc-post-meta-left">
+          <div class="cc-avatar">13</div>
+          <div>
+            <div class="cc-name">Первая ипотека на off-plan в Абу-Даби: реформа ADREC</div>
+            <div class="cc-meta">4 слайда · Изменения в регуляторной базе и ликвидность строящихся объектов</div>
+          </div>
+        </div>
+        <span class="cc-badge">Карусель 13 · смахните →</span>
+      </div>
+      <div class="rail-outer">
+        <button class="rail-arrow prev" aria-label="Назад">←</button>
+        <div class="rail" data-rail>
+          <div class="cc-card"><img src="carousels/post-offplan-mortgage/slide-01.webp" loading="lazy" decoding="async" alt="Off-plan Mortgage, карточка 1"></div>
+          <div class="cc-card"><img src="carousels/post-offplan-mortgage/slide-02.webp" loading="lazy" decoding="async" alt="Off-plan Mortgage, карточка 2"></div>
+          <div class="cc-card"><img src="carousels/post-offplan-mortgage/slide-03.webp" loading="lazy" decoding="async" alt="Off-plan Mortgage, карточка 3"></div>
+          <div class="cc-card"><img src="carousels/post-offplan-mortgage/slide-04.webp" loading="lazy" decoding="async" alt="Off-plan Mortgage, карточка 4"></div>
+        </div>
+        <button class="rail-arrow next" aria-label="Вперёд">→</button>
+      </div>
+    </div>
+
+    <!-- Карусель 14: Редевелопмент исторического центра -->
+    <div class="cc-post" data-reveal data-delay="50">
+      <div class="cc-post-head">
+        <div class="cc-post-meta-left">
+          <div class="cc-avatar">14</div>
+          <div>
+            <div class="cc-name">Редевелопмент центра Дубая: трансформация культовых локаций</div>
+            <div class="cc-meta">3 слайда · Как меняется архитектурная ткань города и что строят взамен</div>
+          </div>
+        </div>
+        <span class="cc-badge">Карусель 14 · смахните →</span>
+      </div>
+      <div class="rail-outer">
+        <button class="rail-arrow prev" aria-label="Назад">←</button>
+        <div class="rail" data-rail>
+          <div class="cc-card"><img src="carousels/post-crowne-plaza/slide-01.webp" loading="lazy" decoding="async" alt="Redevelopment, карточка 1"></div>
+          <div class="cc-card"><img src="carousels/post-crowne-plaza/slide-02.webp" loading="lazy" decoding="async" alt="Redevelopment, карточка 2"></div>
+          <div class="cc-card"><img src="carousels/post-crowne-plaza/slide-03.webp" loading="lazy" decoding="async" alt="Redevelopment, карточка 3"></div>
+        </div>
+        <button class="rail-arrow next" aria-label="Вперёд">→</button>
+      </div>
+    </div>
+
+    <!-- Карусель 15: Sea Theatre Rawai -->
+    <div class="cc-post" data-reveal data-delay="50">
+      <div class="cc-post-head">
+        <div class="cc-post-meta-left">
+          <div class="cc-avatar">15</div>
+          <div>
+            <div class="cc-name">Sea Theatre: 8 вилл у моря на первой линии, Пхукет</div>
+            <div class="cc-meta">9 слайдов · Архитектурная презентация премиального курорта</div>
+          </div>
+        </div>
+        <span class="cc-badge">Карусель 15 · смахните →</span>
       </div>
       <div class="rail-outer">
         <button class="rail-arrow prev" aria-label="Назад">←</button>
@@ -872,15 +1190,15 @@
         <div class="card glow-border price-card" style="max-width:560px;margin:0 auto;border-color:rgba(103,210,223,.45);">
           <div class="small">Тест-драйв системы AI Reels</div>
           <div class="amount">$500</div>
-          <div class="sub">Распаковка, цифровой аватар, позиционирование, 30 сценариев и 10 готовых Reels под ключ.</div>
+          <div class="sub">Распаковка, 2–4 цифровых аватара, позиционирование, 30 сценариев и 10 готовых Reels под ключ.</div>
 
           <ul class="checklist">
             <li>Распаковка личного бренда и экспертизы</li>
             <li>Анализ рынка, конкурентов и ниши</li>
-            <li>Цифровой аватар, визуальный код и голос</li>
+            <li>2–4 цифровых аватара, визуальный код и голос</li>
             <li>Контент-план на 30 дней вперед</li>
             <li>30 готовых сценариев для Reels с хуками</li>
-            <li>10 готовых Reels под ключ: монтаж, обложки, описания, цифровой аватар</li>
+            <li>10 готовых Reels под ключ: монтаж, обложки, описания, 2–4 цифровых аватара</li>
             <li class="bonus">🎁 БОНУС ПРИ СТАРТЕ СЕГОДНЯ: 5 постов-каруселей под ключ бесплатно в подарок</li>
           </ul>
 
@@ -949,95 +1267,82 @@
     });
   }
 
-  // Optimized video playback management:
-  // Play only one video at a time when visible to conserve decoder memory and avoid lag
+  // Video playback management with interactive sound & play button:
+  var activeSoundCard = null;
+
+  document.querySelectorAll('.reel-card').forEach(function (card) {
+    var v = card.querySelector('video');
+    if (!v) return;
+
+    card.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isPlaying = card.classList.contains('is-playing');
+
+      if (isPlaying) {
+        // Currently playing with sound -> pause
+        v.pause();
+        v.muted = true;
+        card.classList.remove('is-playing');
+        var hint = card.querySelector('.sound-hint');
+        if (hint) hint.textContent = 'Смотреть со звуком ↗';
+        if (activeSoundCard === card) activeSoundCard = null;
+      } else {
+        // Stop any previously playing sound video
+        if (activeSoundCard && activeSoundCard !== card) {
+          var prevV = activeSoundCard.querySelector('video');
+          if (prevV) {
+            prevV.pause();
+            prevV.muted = true;
+          }
+          activeSoundCard.classList.remove('is-playing');
+          var prevHint = activeSoundCard.querySelector('.sound-hint');
+          if (prevHint) prevHint.textContent = 'Смотреть со звуком ↗';
+        }
+
+        activeSoundCard = card;
+        card.classList.add('is-playing');
+        var hint = card.querySelector('.sound-hint');
+        if (hint) hint.textContent = 'Пауза · Звук включён';
+        v.muted = false;
+        if (v.paused || v.ended) {
+          v.currentTime = 0;
+        }
+        var p = v.play();
+        if (p && p.catch) p.catch(function () {});
+      }
+    });
+
+    v.addEventListener('ended', function () {
+      card.classList.remove('is-playing');
+      v.muted = true;
+      var hint = card.querySelector('.sound-hint');
+      if (hint) hint.textContent = 'Смотреть со звуком ↗';
+      if (activeSoundCard === card) activeSoundCard = null;
+    });
+  });
+
+  // IntersectionObserver for background video visibility
   if ('IntersectionObserver' in window) {
-    var activeVideo = null;
     var videoObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         var v = entry.target;
-        if (entry.isIntersecting) {
-          if (activeVideo && activeVideo !== v) {
-            activeVideo.pause();
+        var card = v.closest('.reel-card');
+        if (!entry.isIntersecting) {
+          if (card && card.classList.contains('is-playing')) {
+            card.classList.remove('is-playing');
+            var hint = card.querySelector('.sound-hint');
+            if (hint) hint.textContent = 'Смотреть со звуком ↗';
+            if (activeSoundCard === card) activeSoundCard = null;
           }
-          activeVideo = v;
-          v.preload = 'metadata';
-          var playPromise = v.play();
-          if (playPromise && playPromise.catch) {
-            playPromise.catch(function () {});
-          }
-        } else {
           v.pause();
-          if (activeVideo === v) activeVideo = null;
+          v.muted = true;
         }
       });
-    }, { threshold: 0.75 });
+    }, { threshold: 0.2 });
 
     document.querySelectorAll('.reel-card video').forEach(function (v) {
       videoObserver.observe(v);
     });
-  }
-
-  // Arrow navigation for rails (both reels and carousels)
-  document.querySelectorAll('.rail-arrow.prev, [data-rail-prev]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var rail = btn.parentElement.querySelector('.rail');
-      if (rail) rail.scrollBy({ left: -340, behavior: 'smooth' });
-    });
-  });
-  document.querySelectorAll('.rail-arrow.next, [data-rail-next]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var rail = btn.parentElement.querySelector('.rail');
-      if (rail) rail.scrollBy({ left: 340, behavior: 'smooth' });
-    });
-  });
-
-  // Desktop mouse drag scroll without breaking vertical page scroll
-  document.querySelectorAll('[data-rail]').forEach(function (rail) {
-    var isDown = false, startX = 0, startScroll = 0;
-    rail.addEventListener('mousedown', function (e) {
-      if (e.button !== 0) return;
-      isDown = true;
-      startX = e.pageX;
-      startScroll = rail.scrollLeft;
-    });
-    window.addEventListener('mousemove', function (e) {
-      if (!isDown) return;
-      var diff = e.pageX - startX;
-      if (Math.abs(diff) > 4) {
-        rail.scrollLeft = startScroll - diff;
-      }
-    });
-    window.addEventListener('mouseup', function () {
-      isDown = false;
-    });
-  });
-
-  // cursor glow (desktop only, non-coarse)
-  var isCoarse = window.matchMedia('(pointer: coarse)').matches;
-  if (!isCoarse && !reduceMotion) {
-    var dot = document.querySelector('.cursor-dot');
-    var glow = document.querySelector('.cursor-glow');
-    if (dot && glow) {
-      var mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
-      var glowX = mouseX, glowY = mouseY;
-      var visible = false;
-      document.documentElement.classList.add('custom-cursor');
-      window.addEventListener('mousemove', function (e) {
-        mouseX = e.clientX; mouseY = e.clientY;
-        dot.style.transform = 'translate3d(' + mouseX + 'px,' + mouseY + 'px,0) translate(-50%,-50%)';
-        if (!visible) { visible = true; dot.style.opacity = '1'; glow.style.opacity = '1'; }
-      });
-      document.addEventListener('mouseleave', function () {
-        visible = false; dot.style.opacity = '0'; glow.style.opacity = '0';
-      });
-      (function tick() {
-        glowX += (mouseX - glowX) * 0.12;
-        glowY += (mouseY - glowY) * 0.12;
-        glow.style.transform = 'translate3d(' + glowX + 'px,' + glowY + 'px,0) translate(-50%,-50%)';
-        requestAnimationFrame(tick);
-      })();
-    }
   }
 })();
 </script>
