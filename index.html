@@ -387,6 +387,7 @@
 
   /* Carousel Cards (Compact on Mobile, Comfortable on Desktop) */
   .cc-card {
+    position: relative;
     flex: 0 0 auto;
     width: 140px;
     aspect-ratio: 4/5;
@@ -400,7 +401,27 @@
   @media (min-width: 640px) { .cc-card { width: 195px; border-radius: 14px; } }
   @media (min-width: 1024px) { .cc-card { width: 220px; } }
   .cc-card:hover { border-color: rgba(103, 210, 223, 0.45); box-shadow: 0 0 20px rgba(103, 210, 223, 0.15); }
-  .cc-card img { width: 100%; height: 100%; object-fit: cover; user-select: none; -webkit-user-drag: none; display: block; }
+  .cc-card img, .cc-card video { width: 100%; height: 100%; object-fit: cover; user-select: none; -webkit-user-drag: none; display: block; }
+  .cc-video-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(4, 25, 27, 0.65);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(103, 210, 223, 0.3);
+    border-radius: 999px;
+    width: 22px;
+    height: 22px;
+    font-size: 8px;
+    color: var(--cyan-bright);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
 
   .cc-post { margin-top: 24px; }
   @media (min-width: 640px) { .cc-post { margin-top: 36px; } }
@@ -1099,7 +1120,7 @@
           <div class="cc-avatar">06</div>
           <div>
             <div class="cc-name">Yas Point (Aldar) — первый запуск на набережной (AED 6 млрд)</div>
-            <div class="cc-meta">9 слайдов · Waterfront резиденции, цены и условия рассрочки</div>
+            <div class="cc-meta">9 слайдов (3 видео-рендера) · Waterfront резиденции, цены и условия рассрочки</div>
           </div>
         </div>
         <span class="cc-badge">Карусель 06 · смахните →</span>
@@ -1107,9 +1128,9 @@
       <div class="rail-outer">
         <button class="rail-arrow prev" aria-label="Назад">←</button>
         <div class="rail" data-rail>
-          <div class="cc-card"><img src="carousels/post-yas-point/slide-01.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 1"></div>
-          <div class="cc-card"><img src="carousels/post-yas-point/slide-02.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 2"></div>
-          <div class="cc-card"><img src="carousels/post-yas-point/slide-03.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 3"></div>
+          <div class="cc-card"><video src="carousels/post-yas-point/slide-01.mp4" poster="carousels/post-yas-point/slide-01.webp" autoplay muted loop playsinline preload="metadata"></video><span class="cc-video-badge">▶</span></div>
+          <div class="cc-card"><video src="carousels/post-yas-point/slide-02.mp4" poster="carousels/post-yas-point/slide-02.webp" autoplay muted loop playsinline preload="metadata"></video><span class="cc-video-badge">▶</span></div>
+          <div class="cc-card"><video src="carousels/post-yas-point/slide-03.mp4" poster="carousels/post-yas-point/slide-03.webp" autoplay muted loop playsinline preload="metadata"></video><span class="cc-video-badge">▶</span></div>
           <div class="cc-card"><img src="carousels/post-yas-point/slide-04.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 4"></div>
           <div class="cc-card"><img src="carousels/post-yas-point/slide-05.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 5"></div>
           <div class="cc-card"><img src="carousels/post-yas-point/slide-06.webp" loading="lazy" decoding="async" alt="Yas Point, карточка 6"></div>
@@ -1167,7 +1188,7 @@
           <div class="cc-avatar">08</div>
           <div>
             <div class="cc-name">Разбор видового юнита у воды: 222 м², планировка и доходность</div>
-            <div class="cc-meta">9 слайдов · Экспертный разбор ликвидности конкретного лота</div>
+            <div class="cc-meta">9 слайдов (3 видеотура) · Экспертный разбор ликвидности конкретного лота</div>
           </div>
         </div>
         <span class="cc-badge">Карусель 08 · смахните →</span>
@@ -1175,13 +1196,13 @@
       <div class="rail-outer">
         <button class="rail-arrow prev" aria-label="Назад">←</button>
         <div class="rail" data-rail>
-          <div class="cc-card"><img src="carousels/post-unit-2301/slide-01.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 1"></div>
+          <div class="cc-card"><video src="carousels/post-unit-2301/slide-01.mp4" poster="carousels/post-unit-2301/slide-01.webp" autoplay muted loop playsinline preload="metadata"></video><span class="cc-video-badge">▶</span></div>
           <div class="cc-card"><img src="carousels/post-unit-2301/slide-02.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 2"></div>
-          <div class="cc-card"><img src="carousels/post-unit-2301/slide-03.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 3"></div>
+          <div class="cc-card"><video src="carousels/post-unit-2301/slide-03.mp4" poster="carousels/post-unit-2301/slide-03.webp" autoplay muted loop playsinline preload="metadata"></video><span class="cc-video-badge">▶</span></div>
           <div class="cc-card"><img src="carousels/post-unit-2301/slide-04.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 4"></div>
           <div class="cc-card"><img src="carousels/post-unit-2301/slide-05.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 5"></div>
           <div class="cc-card"><img src="carousels/post-unit-2301/slide-06.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 6"></div>
-          <div class="cc-card"><img src="carousels/post-unit-2301/slide-07.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 7"></div>
+          <div class="cc-card"><video src="carousels/post-unit-2301/slide-07.mp4" poster="carousels/post-unit-2301/slide-07.webp" autoplay muted loop playsinline preload="metadata"></video><span class="cc-video-badge">▶</span></div>
           <div class="cc-card"><img src="carousels/post-unit-2301/slide-08.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 8"></div>
           <div class="cc-card"><img src="carousels/post-unit-2301/slide-09.webp" loading="lazy" decoding="async" alt="Unit 2301, карточка 9"></div>
         </div>
@@ -1355,7 +1376,7 @@
           <div class="cc-avatar">15</div>
           <div>
             <div class="cc-name">Sea Theatre: 8 вилл у моря на первой линии, Пхукет</div>
-            <div class="cc-meta">9 слайдов · Архитектурная презентация премиального курорта</div>
+            <div class="cc-meta">9 слайдов (2 живых видеокадра) · Архитектурная презентация премиального курорта</div>
           </div>
         </div>
         <span class="cc-badge">Карусель 15 · смахните →</span>
@@ -1363,11 +1384,11 @@
       <div class="rail-outer">
         <button class="rail-arrow prev" aria-label="Назад">←</button>
         <div class="rail" data-rail>
-          <div class="cc-card"><img src="carousels/viktoria-seatheatre/slide-01.webp" loading="lazy" decoding="async" alt="Sea Theatre Rawai, карточка 1"></div>
+          <div class="cc-card"><video src="carousels/viktoria-seatheatre/slide-01.mp4" poster="carousels/viktoria-seatheatre/slide-01.webp" autoplay muted loop playsinline preload="metadata"></video><span class="cc-video-badge">▶</span></div>
           <div class="cc-card"><img src="carousels/viktoria-seatheatre/slide-02.webp" loading="lazy" decoding="async" alt="Sea Theatre Rawai, карточка 2"></div>
           <div class="cc-card"><img src="carousels/viktoria-seatheatre/slide-03.webp" loading="lazy" decoding="async" alt="Sea Theatre Rawai, карточка 3"></div>
           <div class="cc-card"><img src="carousels/viktoria-seatheatre/slide-04.webp" loading="lazy" decoding="async" alt="Sea Theatre Rawai, карточка 4"></div>
-          <div class="cc-card"><img src="carousels/viktoria-seatheatre/slide-05.webp" loading="lazy" decoding="async" alt="Sea Theatre Rawai, карточка 5"></div>
+          <div class="cc-card"><video src="carousels/viktoria-seatheatre/slide-05.mp4" poster="carousels/viktoria-seatheatre/slide-05.webp" autoplay muted loop playsinline preload="metadata"></video><span class="cc-video-badge">▶</span></div>
           <div class="cc-card"><img src="carousels/viktoria-seatheatre/slide-06.webp" loading="lazy" decoding="async" alt="Sea Theatre Rawai, карточка 6"></div>
           <div class="cc-card"><img src="carousels/viktoria-seatheatre/slide-07.webp" loading="lazy" decoding="async" alt="Sea Theatre Rawai, карточка 7"></div>
           <div class="cc-card"><img src="carousels/viktoria-seatheatre/slide-08.webp" loading="lazy" decoding="async" alt="Sea Theatre Rawai, карточка 8"></div>
@@ -1687,26 +1708,35 @@
     });
   });
 
-  // IntersectionObserver for background video visibility
+  // IntersectionObserver for video autoplay & visibility
   if ('IntersectionObserver' in window) {
     var videoObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         var v = entry.target;
-        var card = v.closest('.reel-card');
-        if (!entry.isIntersecting) {
-          if (card && card.classList.contains('is-playing')) {
-            card.classList.remove('is-playing');
-            var hint = card.querySelector('.sound-hint');
+        var reelCard = v.closest('.reel-card');
+        var ccCard = v.closest('.cc-card');
+
+        if (entry.isIntersecting) {
+          // If carousel video is visible, autoplay it smoothly
+          if (ccCard && v.paused) {
+            var p = v.play();
+            if (p && p.catch) p.catch(function () {});
+          }
+        } else {
+          // Off-screen: pause to preserve CPU and battery
+          if (reelCard && reelCard.classList.contains('is-playing')) {
+            reelCard.classList.remove('is-playing');
+            var hint = reelCard.querySelector('.sound-hint');
             if (hint) hint.textContent = 'Смотреть со звуком ↗';
-            if (activeSoundCard === card) activeSoundCard = null;
+            if (activeSoundCard === reelCard) activeSoundCard = null;
           }
           v.pause();
-          v.muted = true;
+          if (reelCard) v.muted = true;
         }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.15 });
 
-    document.querySelectorAll('.reel-card video').forEach(function (v) {
+    document.querySelectorAll('.reel-card video, .cc-card video').forEach(function (v) {
       videoObserver.observe(v);
     });
   }
