@@ -441,10 +441,259 @@
     flex-shrink: 0;
   }
 
-  /* ---------- case cards ---------- */
-  .case-card { border-left: 2px solid var(--cyan); padding-left: 20px; }
-  @media (min-width: 640px) { .case-card { padding-left: 24px; } }
-  .case-card .big { font-size: 32px; font-weight: 700; letter-spacing: -0.02em; color: var(--cyan-bright); line-height: 1.1; margin-bottom: 8px; }
+  /* ---------- showcase cases (same as main KP) ---------- */
+  .cases-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px 28px;
+    margin-top: 40px;
+  }
+  @media (min-width: 768px) {
+    .cases-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .case-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .case-photo-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    box-shadow: 0 0 0 1px rgba(103, 210, 223, 0.03) inset;
+    background: rgba(13, 20, 22, 0.6);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .case-photo-preview:hover,
+  .case-panel-preview:hover {
+    border-color: rgba(103, 210, 223, 0.45);
+    box-shadow: 0 0 24px rgba(103, 210, 223, 0.18);
+  }
+  .case-photo-preview .img-wrap {
+    position: relative;
+    height: 220px;
+  }
+  @media (min-width: 640px) {
+    .case-photo-preview .img-wrap { height: 250px; }
+  }
+  .case-photo-preview .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .case-photo-preview .stat-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .case-val {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--cyan-bright);
+    line-height: 1.1;
+  }
+  @media (min-width: 640px) {
+    .case-val { font-size: 38px; }
+  }
+  .case-lbl {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.35;
+  }
+  @media (min-width: 640px) {
+    .case-lbl { font-size: 13px; }
+  }
+
+  .case-panel-preview {
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    box-shadow: 0 0 0 1px rgba(103, 210, 223, 0.03) inset;
+    background: linear-gradient(135deg, rgba(27, 89, 99, 0.22), rgba(13, 20, 22, 0.85));
+    padding: 20px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .case-panel-tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    display: block;
+  }
+  .case-panel-trio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  @media (min-width: 640px) {
+    .case-panel-trio { gap: 16px; }
+  }
+  .case-phone-card {
+    width: 76px;
+    aspect-ratio: 9/16;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    flex-shrink: 0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  }
+  @media (min-width: 640px) {
+    .case-phone-card { width: 88px; }
+  }
+  .case-phone-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .case-panel-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+  }
+  .case-evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    border-top: 1px solid var(--line);
+    margin-top: 18px;
+    padding-top: 14px;
+  }
+  .case-evidence-item {
+    text-align: center;
+  }
+  .case-evidence-val {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+  }
+  @media (min-width: 640px) {
+    .case-evidence-val { font-size: 15px; }
+  }
+  .case-evidence-lbl {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 2px;
+    line-height: 1.2;
+  }
+  @media (min-width: 640px) {
+    .case-evidence-lbl { font-size: 11px; }
+  }
+
+  .case-footer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .case-micro {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin: 18px 0 6px;
+  }
+  .case-head {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.25;
+    margin: 0 0 10px;
+  }
+  @media (min-width: 640px) {
+    .case-head { font-size: 22px; }
+  }
+  .case-desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin: 0 0 18px;
+    flex-grow: 1;
+  }
+  .case-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-top: 1px solid var(--line);
+    padding-top: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--cyan-bright);
+    text-decoration: none;
+    transition: gap 0.2s ease, color 0.2s ease;
+  }
+  .case-link:hover {
+    color: #fff;
+    gap: 10px;
+  }
+
+  .stats-banner {
+    margin-top: 56px;
+    border-top: 1px solid var(--line);
+    padding-top: 40px;
+  }
+  .stats-banner-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .stats-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media (min-width: 640px) {
+    .stats-grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .stat-card-item {
+    text-align: center;
+    padding: 24px 16px;
+    background: rgba(13, 20, 22, 0.6);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .stat-card-item:hover {
+    border-color: rgba(103, 210, 223, 0.4);
+    box-shadow: 0 0 20px rgba(103, 210, 223, 0.12);
+  }
+  .stat-card-item .num {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--cyan-bright);
+    line-height: 1.1;
+  }
+  @media (min-width: 640px) {
+    .stat-card-item .num { font-size: 28px; }
+  }
+  .stat-card-item .sub {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--muted);
+  }
 
   /* ---------- pricing ---------- */
   .price-card { text-align: center; padding: 40px 24px; }
@@ -1135,42 +1384,159 @@
       <div data-reveal>
         <div class="section-heading">
           <span class="eyebrow">Кейсы и опыт</span>
-          <h2>Цифры, которые уже произошли на этой технологии</h2>
-          <p>1 111 701 555 просмотров, 2 138 471 подписчик и 176 695 лидов суммарно в проектах с использованием AI Avatar.</p>
+          <h2>Цифры, которые уже произошли</h2>
+          <p>Четыре самых показательных кейса на базе AI-аватаров. Полный архив с пруфами на aiavatar.pro/cases.</p>
         </div>
       </div>
-      <div class="grid grid-2" style="margin-top:36px;">
-        <div data-reveal data-delay="0">
-          <div class="card case-card" style="height:100%">
-            <div class="big">13 млн+</div>
-            <h3 class="mini" style="margin-top:0">13 миллионов просмотров для бизнес-академии</h3>
-            <p style="color:var(--muted);font-size:14px;margin:0;">Ресёрч, экспертные сценарии и AI-ведущий на итальянском выстроили стабильный поток просмотров: 13 054 964 просмотра и 4 469 473 охваченных аккаунта.</p>
+
+      <div class="cases-grid">
+        <!-- Кейс 1: Capitale Sociale -->
+        <div class="case-item" data-reveal data-delay="0">
+          <div class="case-photo-preview">
+            <div class="img-wrap">
+              <img src="cases/italy-capitale.jpg" loading="lazy" decoding="async" alt="Capitale Sociale">
+            </div>
+            <div class="stat-wrap">
+              <span class="case-val">13 млн+</span>
+              <span class="case-lbl">просмотров в опубликованных Insights</span>
+            </div>
+          </div>
+          <div class="case-footer">
+            <div class="case-micro">Capitale Sociale · Бизнес-образование</div>
+            <h3 class="case-head">13 миллионов просмотров для бизнес-академии</h3>
+            <p class="case-desc">Ресёрч, экспертные сценарии и AI-ведущий на итальянском выстроили повторяемый процесс производства видео. Аккаунт набрал 13 054 964 просмотра и 4 469 473 охваченных аккаунтов.</p>
+            <a href="https://aiavatar.pro/cases/italy-capitale/" target="_blank" rel="noopener" class="case-link">
+              Смотреть кейс <span>↗</span>
+            </a>
           </div>
         </div>
-        <div data-reveal data-delay="60">
-          <div class="card case-card" style="height:100%">
-            <div class="big">367 лидов</div>
-            <h3 class="mini" style="margin-top:0">3 продажи вилл за 4 месяца рекламы</h3>
-            <p style="color:var(--muted);font-size:14px;margin:0;">Для девелопера вилл на Бали связали оффер, креативы и квалификацию в Direct. 367 лидов по $32,46, 3 закрытые сделки по продаже вилл.</p>
+
+        <!-- Кейс 2: Bali Feeels -->
+        <div class="case-item" data-reveal data-delay="60">
+          <div class="case-photo-preview">
+            <div class="img-wrap">
+              <img src="cases/bali-feeels.jpg" loading="lazy" decoding="async" alt="Bali Feeels">
+            </div>
+            <div class="stat-wrap">
+              <span class="case-val">367</span>
+              <span class="case-lbl">лидов по $32,46 каждый</span>
+            </div>
+          </div>
+          <div class="case-footer">
+            <div class="case-micro">Performance-маркетинг · Meta Ads</div>
+            <h3 class="case-head">3 продажи вилл за 4 месяца рекламы</h3>
+            <p class="case-desc">Для девелопера вилл на Бали связали оффер, англоязычные рекламные креативы и воронку квалификации. За четыре месяца: 367 лидов по $32,46 каждый, 3 виллы проданы из этого потока.</p>
+            <a href="https://aiavatar.pro/cases/bali-feeels-367-leads/" target="_blank" rel="noopener" class="case-link">
+              Смотреть креатив и результаты <span>↗</span>
+            </a>
           </div>
         </div>
-        <div data-reveal data-delay="120">
-          <div class="card case-card" style="height:100%">
-            <div class="big">$2 млн+</div>
-            <h3 class="mini" style="margin-top:0">Пайплайн для недвижимости Пхукета</h3>
-            <p style="color:var(--muted);font-size:14px;margin:0;">AI-аватары и англоязычная воронка принесли 567 841 просмотр за 90 дней и пайплайн потенциальных сделок более $2 млн.</p>
+
+        <!-- Кейс 3: Edenvest Phuket -->
+        <div class="case-item" data-reveal data-delay="120">
+          <div class="case-panel-preview">
+            <span class="case-panel-tag">Пхукет / Недвижимость</span>
+            <div class="case-panel-trio">
+              <div class="case-phone-card">
+                <img src="cases/own-edenvest-phuket.webp" loading="lazy" decoding="async" alt="Edenvest Reel">
+              </div>
+              <div class="case-panel-center">
+                <span class="case-val">$2 млн+</span>
+                <span class="case-lbl">потенциальный пайплайн сделок</span>
+              </div>
+              <div class="case-phone-card">
+                <img src="cases/phuket-frame-2.webp" loading="lazy" decoding="async" alt="Edenvest Analytics">
+              </div>
+            </div>
+            <div class="case-evidence-grid">
+              <div class="case-evidence-item">
+                <div class="case-evidence-val">567 841</div>
+                <div class="case-evidence-lbl">просмотров</div>
+              </div>
+              <div class="case-evidence-item">
+                <div class="case-evidence-val">90</div>
+                <div class="case-evidence-lbl">дней</div>
+              </div>
+              <div class="case-evidence-item">
+                <div class="case-evidence-val">AI</div>
+                <div class="case-evidence-lbl">аватары + воронка</div>
+              </div>
+            </div>
+          </div>
+          <div class="case-footer">
+            <div class="case-micro">Пхукет / Недвижимость</div>
+            <h3 class="case-head">Пайплайн на $2 млн+ для недвижимости Пхукета</h3>
+            <p class="case-desc">AI-аватары и англоязычная воронка принесли 567 841 просмотр за 90 дней и потенциальный пайплайн сделок больше $2 млн.</p>
+            <a href="https://aiavatar.pro/cases/phuket-edenvest-2m/" target="_blank" rel="noopener" class="case-link">
+              Смотреть кейс <span>↗</span>
+            </a>
           </div>
         </div>
-        <div data-reveal data-delay="180">
-          <div class="card case-card" style="height:100%">
-            <div class="big">+10 500</div>
-            <h3 class="mini" style="margin-top:0">Органический рост брокера в Дубае</h3>
-            <p style="color:var(--muted);font-size:14px;margin:0;">Старт со 122 подписчиков. Прорывной ролик набрал 395 000 просмотров, далее регулярные видео стабильно собирали 2 000 – 3 000 просмотров, отдельные до 50 000.</p>
+
+        <!-- Кейс 4: Eva Dubai -->
+        <div class="case-item" data-reveal data-delay="180">
+          <div class="case-panel-preview">
+            <span class="case-panel-tag">Дубай / Органика</span>
+            <div class="case-panel-trio">
+              <div class="case-phone-card">
+                <img src="cases/own-eva-dubai.webp" loading="lazy" decoding="async" alt="Eva Dubai Reel">
+              </div>
+              <div class="case-panel-center">
+                <span class="case-val">+10 500</span>
+                <span class="case-lbl">подписчиков с одного AI Reel</span>
+              </div>
+              <div class="case-phone-card">
+                <img src="cases/dubai-frame-2.webp" loading="lazy" decoding="async" alt="Eva Dubai Analytics">
+              </div>
+            </div>
+            <div class="case-evidence-grid">
+              <div class="case-evidence-item">
+                <div class="case-evidence-val">348 657</div>
+                <div class="case-evidence-lbl">просмотров · IG</div>
+              </div>
+              <div class="case-evidence-item">
+                <div class="case-evidence-val">436 926</div>
+                <div class="case-evidence-lbl">просмотров · TT</div>
+              </div>
+              <div class="case-evidence-item">
+                <div class="case-evidence-val">до 50К</div>
+                <div class="case-evidence-lbl">на других видео</div>
+              </div>
+            </div>
+          </div>
+          <div class="case-footer">
+            <div class="case-micro">Дубай / Органика</div>
+            <h3 class="case-head">Органический рост аккаунта брокера в Дубае</h3>
+            <p class="case-desc">Брокер по недвижимости в Дубае начинал со 122 подписчиков. Мы выстроили регулярный контент на AI-аватаре про инвестиции и переезд. Прорывной Reel набрал 395 000 просмотров в Instagram и TikTok вместе, дальше остальные ролики стабильно получали 2-3 тысячи просмотров, отдельные до 50 000. Весь рост органический.</p>
+            <a href="https://aiavatar.pro/cases/dubai-eva-one-reel/" target="_blank" rel="noopener" class="case-link">
+              Смотреть кейс <span>↗</span>
+            </a>
           </div>
         </div>
       </div>
-      <div data-reveal data-delay="250" style="margin-top:24px;">
-        <a href="https://ai-reels-kp.vercel.app/" target="_blank" rel="noopener" class="pill">Смотреть полный тариф со всеми тарифами и калькулятором ↗</a>
+
+      <!-- Общая статистика по технологии AI Avatar -->
+      <div class="stats-banner" data-reveal data-delay="220">
+        <div class="stats-banner-title">Общая статистика по технологии AI Avatar</div>
+        <div class="stats-grid-3">
+          <div class="stat-card-item">
+            <div class="num">1 111 701 555</div>
+            <div class="sub">просмотров</div>
+          </div>
+          <div class="stat-card-item">
+            <div class="num">2 138 471</div>
+            <div class="sub">подписчиков</div>
+          </div>
+          <div class="stat-card-item">
+            <div class="num">176 695</div>
+            <div class="sub">лидов</div>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal data-delay="280" style="margin-top:32px; display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+        <a href="https://aiavatar.pro/cases/" target="_blank" rel="noopener" class="btn btn-ghost" style="padding:10px 22px; font-size:13px;">Смотреть все кейсы ↗</a>
+        <a href="https://ai-reels-kp.vercel.app/" target="_blank" rel="noopener" class="pill" style="padding:10px 20px; font-size:13px;">Смотреть полный тариф со всеми тарифами и калькулятором ↗</a>
       </div>
     </div>
   </section>
